@@ -7,19 +7,18 @@ app.engine('ejs', engine);
 app.set('views', './class-5');
 app.set('view engine', 'ejs');
 
-app.get('/', function(req, res){
-	const data = fs.readFileSync('./class-5/posts.json');
+const data = fs.readFileSync('./class-5/posts.json');
+const datas = JSON.parse(data);
 
-	const datas = JSON.parse(data);
+app.get('/', function(req, res){
+	
 
 	res.render('homepage', { datas: datas });
 });
 
 //use node to fixed url value
 app.get('/view', (req, res) => {
-	const data = fs.readFileSync('./class-5/posts.json');
-
-	const datas = JSON.parse(data);
+	
 	const index = req.query.index;
 
 	const posts = datas[index];

@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/style.css">
+
+<div class="app">
+	<h1>我的個人日記 APP</h1>
+	<div>
+	  <% for(var i = 0; i < datas.length; i++) { %>
+		<div class="page">
+			<h2>
+				<a href="/view?index=<%= i %>">
+					<%= datas[i].title %>
+				</a>
+			</h2>
+			<div>
+				<%= datas[i].content  %>
+			</div>
+		</div>
+	  <% } %>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/style.css">
+<div class="app">
+	<h1>我的個人日記 APP</h1>
+	<h2 name="title"><%= posts.title %></h2>
+	<p class="pageContent" name="content">
+		<%= posts.content  %>
+	</p>
+	<div class="viewFun">
+		<a href="/">Home</a>
+		<a href="/edit?index=<%= index %>">Edit</a>
+	</div>
+</div>
